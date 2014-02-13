@@ -163,6 +163,4 @@ alias bashrc="vim ~/.bashrc"
 search () { find . | xargs grep "$@"; }
 
 # Start in js directory
-cd ~/projects/ebay-analyzer
-
-tmux
+cd ~/projects
