@@ -90,6 +90,7 @@ export PIP_RESPECT_VIRTUALENV=true
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lf='ls -f'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -146,7 +147,7 @@ alias go='workon socialingot; python manage.py runserver 0.0.0.0:3232'
 alias trials='workon socialingot; python manage.py test --nologcapture monetization.apps.whiteRabbit -s'
 alias localsettings='cp ~/projects/white_rabbit_local_settings.py ./settings/local_settings_api.py; cp ~/projects/white_rabbit_local_settings.py ./settings/local_settings_cbapp.py; cp ~/projects/white_rabbit_local_settings.py ./settings/local_settings_white_rabbit.py; cp ~/projects/white_rabbit_local_settings.py ./settings/local_settings_honey_tree.py'
 
-# Kill of my proceses (useful once in a while because disconnects don't kill them)
+# Kill of my proceses
 alias killall='pkill -u zhangb'
 
 # cd aliases
