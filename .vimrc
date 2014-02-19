@@ -1,10 +1,21 @@
 " Color Scheme Slate (but doesn't work correctly Secure Shell or tmux)
 colorscheme slate
 
+" Tab settings
+set expandtab          " Expand tabs into spaces
+set smarttab           " Allow for easy backspace of tabs
+set tabstop=4          " Use 4 spaces for tabs
+set softtabstop=4      " Use 4 spaces for soft tabs
+set shiftwidth=4       " Make shift same as a tab
+
+" Search settings
+set hlsearch           " Highlight results
+set incsearch          " Start showing results while typing
+set ignorecase         " Ignore case in searched
+set smartcase          " Use case in search with capitals
+
 " Formatting Goodness
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set autoindent
 set smartindent
 set number
 set ruler
@@ -12,14 +23,25 @@ set history=500
 set showmatch
 set showcmd " display incomplete commands
 set autoread
-set incsearch
+
 set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
 set term=cons25
+set splitbelow         " Default splits to below
+set splitright         " Default vsplits to the right
+set title              " Set title for gvim
+set t_Co=256           " Force 256 colors
 
-" Navigation between Splits (Ctrl-W doesn't work in Secure Shell)
-:map <C-e> <C-w>
+" Navigation between Splits (You don't want to hit Ctrl-W in Secure Shell)
+map <C-e> <C-w>
 
-" Center screen on cursor
+" Short cuts for split nav
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
+
+" Hit Enter to center screen on cursor
 :nnoremap <Enter> zz
 
 " Remap tab to auto-complete
@@ -51,9 +73,9 @@ set term=cons25
 :nmap <Space> za
 
 " Code folding
-set foldmethod=indent
 set foldnestmax=10
-set foldlevel=99
+set foldmethod=syntax  " Fold based on syntax
+set foldlevel=999      " Start with folds open
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
