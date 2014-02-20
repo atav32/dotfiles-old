@@ -1,4 +1,5 @@
 " Color Scheme Slate (but doesn't work correctly Secure Shell or tmux)
+set term=xterm-256color
 colorscheme slate
 
 " Tab settings
@@ -50,11 +51,10 @@ map <C-l> <C-w>l
 " Remap E to insert after end of word
 :nnoremap E ea
 
-" Remap :Q to :q
+" Remap typos
 :command Q q
-
-" Remap :W to :w
 :command W w
+:command Wq wq
 
 " Commit to mercurial (just type the message between the quotes)
 :nmap gc :silent !hg com -m ""<Left>
